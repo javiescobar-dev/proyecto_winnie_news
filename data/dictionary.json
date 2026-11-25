@@ -1,0 +1,14 @@
+{
+  "_ayuda": "Nombres propios inglés→español. 'en' y 'es' son obligatorios. 'alias' son otras formas en que aparece el nombre en inglés (por ejemplo, sin espacios). Por defecto se escribe 'Español (English)'; con \"mostrarOriginal\": false se escribe solo el español. Si un nombre no está aquí, se deja tal cual.",
+  "terminos": [
+    { "en": "Black Temple", "es": "Templo Oscuro", "alias": ["BlackTemple"], "mostrarOriginal": false },
+    { "en": "Serpentshrine Cavern", "es": "Caverna Santuario Serpiente", "mostrarOriginal": false },
+    { "en": "The Botanica", "es": "El Invernáculo", "alias": ["Botanica", "La Botánica", "La Botanica"], "mostrarOriginal": false },
+    { "en": "Wrathbone Flayer", "es": "Despellejador Hueso de Cólera" },
+    { "en": "Shadowmoon Blood Mage", "es": "Mago Sangriento de Sombra Luna" },
+    { "en": "Shadowmoon Deathshaper", "es": "Modelador de Muerte Sombra Luna" },
+    { "en": "Impaling Spine", "es": "Espinazo impalador" },
+    { "en": "Sunseeker Gene-Splicer", "es": "Fusionador de Genes Buscasol" },
+    { "en": "The Lurker Below", "es": "El Rondador de Abajo" }
+  ]
+}

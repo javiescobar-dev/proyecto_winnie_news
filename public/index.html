@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Winnie News</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📰</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <!-- Acceso -->
+  <section id="login-screen" class="login" hidden>
+    <form id="login-form" class="login-card">
+      <h1>📰 Winnie News</h1>
+      <p class="muted">Introduce la contraseña para continuar.</p>
+      <label for="password" class="sr-only">Contraseña</label>
+      <input id="password" type="password" autocomplete="current-password" placeholder="Contraseña" required>
+      <button type="submit" class="btn primary" id="login-btn">Entrar</button>
+      <p id="login-error" class="error" role="alert"></p>
+    </form>
+  </section>
+
+  <!-- Aplicación -->
+  <div id="app-screen" class="app" hidden>
+    <header class="topbar">
+      <span class="brand">📰 Winnie News</span>
+      <button id="logout" class="btn ghost small">Salir</button>
+    </header>
+
+    <main class="split">
+      <section class="panel" aria-label="Entrada">
+        <label for="raw" class="panel-title">Texto de la compilación</label>
+        <textarea id="raw" class="raw" spellcheck="false"
+          placeholder="Pega aquí el texto de la compilación copiado del foro (COMPILACIÓN 158 [Mazmorras] ...)"></textarea>
+        <div class="row">
+          <button id="generate" class="btn primary">✨ Generar noticia</button>
+          <span id="status" class="status" role="status" aria-live="polite"></span>
+        </div>
+        <div id="notices" class="notices"></div>
+      </section>
+
+      <section class="panel" aria-label="Vista previa">
+        <div class="toolbar">
+          <div class="tabs" role="tablist">
+            <button class="tab active" data-mode="preview" role="tab" aria-selected="true">Vista previa</button>
+            <button class="tab" data-mode="edit" role="tab" aria-selected="false">Editar texto</button>
+          </div>
+          <span id="counter" class="counter"></span>
+        </div>
+
+        <textarea id="editor" class="editor" spellcheck="true" hidden
+          placeholder="Aquí aparecerá el Markdown de la noticia para que puedas retocarlo."></textarea>
+
+        <div id="preview" class="discord" aria-live="polite"></div>
+
+        <div class="actions">
+          <button id="regen-text" class="btn" disabled>🔁 Regenerar texto</button>
+          <button id="download" class="btn" disabled>⬇️ Descargar imagen</button>
+        </div>
+
+        <div class="image-tools">
+          <label for="image-prompt" class="panel-title small">Prompt de la imagen (en inglés)</label>
+          <textarea id="image-prompt" class="prompt" rows="3"
+            placeholder="Se rellena al generar la noticia. Puedes editarlo y regenerar solo la imagen."></textarea>
+          <button id="regen-image" class="btn" disabled>🎨 Regenerar imagen</button>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
